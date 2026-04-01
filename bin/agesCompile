@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+const path = require('path');
+const { exec } = require('child_process');
+
+const compilerPath = path.join(__dirname, '..', 'compiler.js');
+const args = process.argv.slice(2).map(arg => `"${arg}"`).join(' ');
+
+
+exec(`node "${compilerPath}" ${args}`, (error, stdout, stderr) => {
+  if (stdout) console.log(stdout);
+  if (stderr) console.error(stderr);
+  if (error) process.exit(error.code || 1);
+});

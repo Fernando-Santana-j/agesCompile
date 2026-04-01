@@ -1,0 +1,20 @@
+{
+  "name": "agescompile",
+  "version": "1.0.0",
+  "description": "Ages Compiler - Compilador de linguagem Ages",
+  "main": "compiler.js",
+  "bin": {
+    "agesCompile": "./bin/agesCompile"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["compiler", "ages"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
+}
