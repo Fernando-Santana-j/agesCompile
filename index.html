@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGES Compiler - Relatório</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Calibri', 'Times New Roman', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 60px 40px;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 3px solid #333;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .metadata {
+            font-size: 0.95em;
+            color: #999;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+
+        main {
+            line-height: 1.8;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            font-size: 1.6em;
+            color: #333;
+            margin: 30px 0 15px 0;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        section h3 {
+            font-size: 1.3em;
+            color: #555;
+            margin: 20px 0 10px 0;
+        }
+
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: #333;
+        }
+
+        .exemplo {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+            line-height: 1.5;
+            overflow-x: auto;
+        }
+
+        code {
+            background: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+
+        footer {
+            text-align: center;
+            border-top: 3px solid #333;
+            padding-top: 20px;
+            margin-top: 50px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <h1>AGES COMPILER</h1>
+            <p>Compilador de Linguagem Própria em Português</p>
+            <div class="metadata">
+                <p><strong>Criador:</strong> Fernando Santana</p>
+                <p><strong>Instituição:</strong> Faculdade AGES</p>
+                <p><strong>Data:</strong> 2026 | Versão: 1.0.0</p>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <!-- OBJETIVO -->
+            <section>
+                <h2>Objetivo</h2>
+                <p>O AGES Compiler é um compilador desenvolvido para facilitar a programação através de características e sintaxe em português. O objetivo principal é criar uma linguagem de programação própria com sintaxe totalmente em português, simplificando o aprendizado de conceitos de compiladores para iniciantes falantes da língua portuguesa.</p>
+            </section>
+
+            <!-- COMO FOI FEITO -->
+            <section>
+                <h2>Como Foi Feito</h2>
+                
+                <h3>Etapas do Compilador</h3>
+                <p>O projeto foi desenvolvido em três etapas principais:</p>
+                
+                <ol>
+                    <li><strong>Lexer (lexer.js):</strong> Realiza a análise léxica do código, convertendo o arquivo de texto em uma sequência de tokens (palavras-chave, identificadores, operadores, etc.)</li>
+                    
+                    <li><strong>Parser (parser.js):</strong> Realiza a análise sintática dos tokens, criando uma Árvore de Sintaxe Abstrata (AST) que representa a estrutura do programa.</li>
+                    
+                    <li><strong>Interpretador (interpreter.js):</strong> Executa a AST gerada pelo parser, interpretando e rodando o código Ages.</li>
+                </ol>
+
+                <h3>Integração</h3>
+                <p>O compilador (compiler.js) orquestra todo o processo, integrando lexer, parser e interpretador em um fluxo único. A interface de linha de comando (bin/agesCompile) permite executar arquivos .ages diretamente do terminal.</p>
+
+                <p><strong>Tecnologias utilizadas:</strong> JavaScript (Node.js), análise léxica e sintática, AST (Árvore de Sintaxe Abstrata).</p>
+            </section>
+
+            <!-- LINGUAGEM AGES -->
+            <section>
+                <h2>Linguagem AGES</h2>
+                
+                <h3>Características</h3>
+                <p>A linguagem AGES suporta:</p>
+                <ul>
+                    <li><strong>Variáveis:</strong> <code>variavel nomeDaVariavel = valor</code></li>
+                    <li><strong>Funções:</strong> <code>funcao nomeFuncao(parametros) { ... }</code></li>
+                    <li><strong>Condicionais:</strong> <code>se (condicao) { ... } senao { ... }</code></li>
+                    <li><strong>Loops:</strong> <code>enquanto (condicao) { ... }</code></li>
+                    <li><strong>Saída:</strong> <code>escreva(valor)</code></li>
+                    <li><strong>Retorno:</strong> <code>retorne valor</code></li>
+                    <li><strong>Tipos:</strong> Números, Strings, Booleanos, Null</li>
+                </ul>
+
+                <h3>Exemplo Prático</h3>
+                <div class="exemplo">
+variavel nome = "Ages Lang"
+variavel numero = 7
+escreva(numero)
+
+se numero == 2
+{
+  escreva(nome)
+}
+                </div>
+            </section>
+
+            <!-- COMO USAR -->
+            <section>
+                <h2>Como Usar</h2>
+                
+                <ol>
+                    <li>Instalar as dependências: <code>npm install</code></li>
+                    <li>Criar um arquivo com extensão <code>.ages</code></li>
+                    <li>Compilar e executar: <code>agesCompile seu_arquivo.ages</code></li>
+                </ol>
+            </section>
+
+            <!-- ESTRUTURA -->
+            <section>
+                <h2>Estrutura de Arquivos</h2>
+                
+                <div class="exemplo">
+agesCompile/
+├── lexer.js           # Análise léxica
+├── parser.js          # Análise sintática
+├── interpreter.js     # Interpretador
+├── compiler.js        # Compilador principal
+├── package.json       # Dependências
+├── exemplo.ages       # Arquivo de exemplo
+├── bin/
+│   └── agesCompile    # CLI
+├── README.md
+└── index.html         # Este relatório
+                </div>
+            </section>
+
+            <!-- CONCLUSÃO -->
+            <section>
+                <h2>Conclusão</h2>
+                <p>O AGES Compiler demonstra a implementação completa de um compilador funcional, desde a análise léxica até a interpretação. O projeto cumpre o objetivo de facilitar a programação em português e serve como ferramenta educacional para aprender conceitos fundamentais de design de linguagens de programação.</p>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <p><strong>AGES Compiler</strong> | Faculdade AGES</p>
+            <p>Criador: Fernando Santana</p>
+            <p><a href="https://github.com/Fernando-Santana-j/agesCompile" style="color: #333; text-decoration: none; font-weight: bold;">GitHub: Fernando-Santana-j/agesCompile</a></p>
+            <p>2026</p>
+        </footer>
+    </div>
+</body>
+</html>

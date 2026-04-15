@@ -1,2 +1,8 @@
-variavel nome     = "Ages Lang"
-escreva(nome)
+variavel nome = "Ages Lang"
+variavel numero = 7
+escreva(numero)
+
+se numero == 2
+{
+  escreva(nome)
+}
