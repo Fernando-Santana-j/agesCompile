@@ -1,0 +1,52 @@
+Instalar pacotes:
+npm install -g .
+
+modos de executar:
+node compiler.js exemplo.ages
+./bin/agesCompile exemplo.ages
+agesCompile exemplo.ages
+
+
+--tokens Mostra todos os tokens gerados pelo lexer
+--ast Mostra a árvore sintática (AST) em JSON
+node compiler.js exemplo.ages --tokens --ast
+
+
+sintax:
+Variáveis:
+variavel x = 10
+variavel nome = "Olá"
+variavel ativo = sim
+x = 20
+
+Log:
+escreva("texto")
+escreva(x + 1)
+
+Condicionais:
+se x > 0 {
+    escreva("positivo")
+} senao {
+    escreva("zero ou negativo")
+}
+
+Loops:
+variavel i = 0
+while i < 5 {
+    escreva(i)
+    i = i + 1
+}
+
+Funcoes:
+funcao soma(a, b) {
+    return a + b
+}
+escreva(soma(3, 4))
+
+
+operadores:
+Aritméticos: +, -, *, /, %
+Comparação: ==, !=, <, <=, >, >=
+Lógicos: &&, ||, !
+Booleanos: sim, nao
+Valor nulo: null
